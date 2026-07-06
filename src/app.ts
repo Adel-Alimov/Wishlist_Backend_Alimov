@@ -2,6 +2,7 @@ import express, { Request, Response } from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import authRoter from "./routes/authRoutes";
+import wishRouter from "./routes/wishRoutes";
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ mongoose
     .catch((error) => console.log("Error", error));
 
 app.use("/api/auth", authRoter);
+app.use("/api/wish", wishRouter);
 
 app.get("/", (req: Request, res: Response) => {
     res.send("Hi");
