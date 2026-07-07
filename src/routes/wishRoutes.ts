@@ -4,7 +4,7 @@ import {
     addWishValidation,
     deleteWishValidation,
     editWishValidation,
-} from "../validations/wishValidation";
+} from "../validations/wishValidations";
 import { validateRequest } from "../middlewares/errorHandler";
 import { addWish, deleteWish, editWish } from "../controllers/wishController";
 
